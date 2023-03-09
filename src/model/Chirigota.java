@@ -41,6 +41,11 @@ public class Chirigota extends AgrupacionOficial implements Callejera{
         return "Cantando la presentación de la Chirigota " + getNombre();
     }
 
+    @Override
+    public String hacerTipo() {
+        return null;
+    }
+
     /**
      * Función que anuncia que una chirigota va caminito del falla
      * @return Retorna una cadena de texto que anuncia que una chirigota va caminito del falla
