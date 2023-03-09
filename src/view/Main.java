@@ -4,12 +4,20 @@ package view;
 import controller.Coac;
 import model.*;
 
+/**
+ * Clase principal de las agrupaciones de carnavales. Accede al modelo y gestiona las acciones del usuario
+ * @author Javier Gámez Mendoza
+ * @version 1.0
+ */
 public class Main {
 	static Coac coac = new Coac(20,10);
 	public static void main(String[] args) {
 		gestionPrograma();
 	}
 
+	/**
+	 * Método que se encarga de derivar a las diferentes opciones del programa
+	 */
 	private static void gestionPrograma() {
 		int opc;
 		do {
@@ -35,15 +43,27 @@ public class Main {
 		finDelPrograma();
 	}
 
+	/**
+	 * Método que ordena la lista de agrupaciones en función de la letra de la obra.
+	 */
 	private static void sortAgrupML() {
 	}
 
+	/**
+	 * Método que ordena la lista de agrupaciones en función del autor
+	 */
 	private static void sortAgrupAuthor() {
 	}
 
+	/**
+	 * Método que ordena la lista de agrupaciones en funcion del nombre
+	 */
 	private static void sortAgrupName() {
 	}
 
+	/**
+	 * Método que lista todas las obras de tipo Romancero
+	 */
 	private static void listRomanceros() {
 		Agrupacion[] a = coac.getAgrupaciones();
 		for (int i = 0; i < a.length; i++) {
@@ -52,7 +72,9 @@ public class Main {
 			}
 		}
 	}
-
+	/**
+	 * Método que lista todas las obras de tipo Comparsa
+	 */
 	private static void listComparsas() {
 		Agrupacion[] a = coac.getAgrupaciones();
 		for (int i = 0; i < a.length; i++) {
@@ -61,7 +83,9 @@ public class Main {
 			}
 		}
 	}
-
+	/**
+	 * Método que lista todas las obras de tipo Cuarteto
+	 */
 	private static void listCuartetos() {
 		Agrupacion[] a = coac.getAgrupaciones();
 		for (int i = 0; i < a.length; i++) {
@@ -70,7 +94,9 @@ public class Main {
 			}
 		}
 	}
-
+	/**
+	 * Método que lista todas las obras de tipo Coro
+	 */
 	private static void listCoros() {
 		Agrupacion[] a = coac.getAgrupaciones();
 		for (int i = 0; i < a.length; i++) {
@@ -79,7 +105,9 @@ public class Main {
 			}
 		}
 	}
-
+	/**
+	 * Método que lista todas las obras de tipo Chirigota
+	 */
 	private static void listChirigotas() {
 		Agrupacion[] a = coac.getAgrupaciones();
 		for (int i = 0; i < a.length; i++) {
@@ -88,7 +116,9 @@ public class Main {
 			}
 		}
 	}
-
+	/**
+	 * Método que lista todas las obras de cualquier tipo
+	 */
 	private static void listAll() {
 		Agrupacion[] a = coac.getAgrupaciones();
 		for (int i = 0; i < a.length; i++) {
@@ -98,15 +128,27 @@ public class Main {
 		}
 	}
 
+	/**
+	 * Método que modifica las características de cualquier agrupación
+	 */
 	private static void modAgrupacion() {
 	}
 
+	/**
+	 * Método que elimina agrupaciones de la lista
+	 */
 	private static void opcDeleteAgrupacion() {
 	}
 
+	/**
+	 * Método que añade agrupaciones a la lista
+	 */
 	private static void addAgrupacion() {
 	}
 
+	/**
+	 * Método que gestiona el submenú Integrantes
+	 */
 	private static void opcIntegrantes() {
 		int opc;
 		do {
@@ -117,6 +159,9 @@ public class Main {
 		} while (opc != 0);
 	}
 
+	/**
+	 * Método que gestiona el submenú concurso
+	 */
 	private static void opcConcurso() {
 		int opc;
 		do {
@@ -128,6 +173,9 @@ public class Main {
 		} while (opc != 0);
 	}
 
+	/**
+	 * Método que muestra por pantalla el menú principal
+	 */
 	private static void mostrarMenuPrincipal() {
 		Util.escribir("\n");
 		Util.escribir("╔═══════════════════════════════════╗");
@@ -151,6 +199,9 @@ public class Main {
 		Util.escribir(" 14. Ordenar por el autor de música/letra.");
 	}
 
+	/**
+	 * Método que muestra por pantalla el submenú de integrantes
+	 */
 	private static void mostrarMenuIntegrantes() {
 		Util.escribir("\n");
 		Util.escribir("┌──────────────────────────┐");
@@ -164,6 +215,9 @@ public class Main {
 		Util.escribir("  6. Ordenar por el nombre.");
 	}
 
+	/**
+	 * Método que muestra por pantalla el submenú concurso
+	 */
 	private static void mostrarMenuConcurso() {
 		Util.escribir("\n");
 		Util.escribir("┌──────────────────────┐");
@@ -187,6 +241,9 @@ public class Main {
 		Util.escribir(" 13. Ordenar por autor de música/letra.");
 	}
 
+	/**
+	 * Método que finaliza el programa
+	 */
 	private static void finDelPrograma() {
 		Util.escribir("\nFin del programa.");
 		System.exit(0);
