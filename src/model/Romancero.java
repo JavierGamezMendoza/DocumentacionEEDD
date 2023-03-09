@@ -34,4 +34,11 @@ public class Romancero extends Agrupacion implements Callejera{
     public String amoAescucha() {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "Romancero{" +
+                "tematicaCartelon='" + tematicaCartelon + '\'' +
+                '}';
+    }
 }

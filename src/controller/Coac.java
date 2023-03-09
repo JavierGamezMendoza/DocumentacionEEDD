@@ -10,9 +10,8 @@
 //void ordenar_por_autor_musica_letra(): Ordena el array por el autor de la agrupación.
 //Otros que consideres oportunas, como asignarPuntos(), ver agrupacionesConcurso(), etc.
 package controller;
-import model.AgrupacionOficial;
-import model.Integrante;
-import model.Agrupacion;
+import model.*;
+
 import java.util.Arrays;
 
 public class Coac {
@@ -60,17 +59,27 @@ public class Coac {
         }
         return false;
     }
-    public void ordenar_por_puntos(){
-        Arrays.sort(agrupaciones, new ComPuntos());
-    }
-    public void ordenar_por_nombre(){
-
-    }
-    public void ordenar_por_autor(){
-
-    }
-    public void ordenar_por_autor_musica_letra(){
-
+    public Integrante[] getIntegrantes() {
+        return integrantes;
     }
 
+    public void setIntegrantes(Integrante[] integrantes) {
+        this.integrantes = integrantes;
+    }
+
+    public Agrupacion[] getAgrupaciones() {
+        return agrupaciones;
+    }
+
+    public void setAgrupaciones(Agrupacion[] agrupaciones) {
+        this.agrupaciones = agrupaciones;
+    }
+
+    public AgrupacionOficial[] getAgrupacionesOficiales() {
+        return agrupacionesOficiales;
+    }
+
+    public void setAgrupacionesOficiales(AgrupacionOficial[] agrupacionesOficiales) {
+        this.agrupacionesOficiales = agrupacionesOficiales;
+    }
 }

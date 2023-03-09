@@ -40,7 +40,9 @@ public class Integrante {
     }
 
     public void setEdad(Integer edad) {
-        this.edad = edad;
+        if (edad >= 18) {
+            this.edad = edad;
+        }
     }
 
     public String getLocalidad() {
@@ -49,5 +51,14 @@ public class Integrante {
 
     public void setLocalidad(String localidad) {
         this.localidad = localidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Integrante{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", localidad='" + localidad + '\'' +
+                '}';
     }
 }

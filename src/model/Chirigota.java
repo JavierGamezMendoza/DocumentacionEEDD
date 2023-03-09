@@ -3,14 +3,9 @@ package model;
 public class Chirigota extends AgrupacionOficial implements Callejera{
     private Integer nCuples;
 
-    public Chirigota(String nombre, String autor, String autorMusica, String autorLetra, String tipo, Integer nCuples, Integer puntos) {
-        this.setNombre(nombre);
-        this.setAutor(autor);
-        this.setAutorMusica(autorMusica);
-        this.setAutorLetra(autorLetra);
-        this.setTipo(tipo);
+    public Chirigota(String nombre, String autor, String autorMusica, String autorLetra, String tipo, Integer nCuples, Integer pts) {
+        super(nombre, autor, autorMusica, autorLetra, tipo, pts);
         this.setnCuples(nCuples);
-        this.setPuntos(puntos);
     }
 
     public Integer getnCuples() {
@@ -28,13 +23,18 @@ public class Chirigota extends AgrupacionOficial implements Callejera{
     }
 
     @Override
+    public String caminitoDelFalla() {
+        return "Chirigota " + getNombre() + " caminito del Falla";
+    }
+
+    @Override
     public String hacerTipo() {
-        return null;
+        return "Amo a escuchar la chirigota " + getNombre();
     }
 
     @Override
     public String amoAescucha() {
-        return null;
+        return "Chirigota " + this + ", cuples=" + getnCuples();
     }
 }
 
