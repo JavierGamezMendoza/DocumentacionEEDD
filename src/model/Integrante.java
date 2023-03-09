@@ -4,6 +4,11 @@
 
 package model;
 
+/**
+ * Clase para los integrantes
+ * @author Javier Gámez Mendoza
+ * @version 1.0
+ */
 public class Integrante {
     private static Integer nParticipante;
     private String nombre;
@@ -11,6 +16,12 @@ public class Integrante {
     private String localidad;
 
 
+    /**
+     * Constructor de los integrantes
+     * @param nombre Nombre de los integrantes
+     * @param edad Edad de los integrantes
+     * @param localidad Localidad de los integrantes
+     */
     public Integrante(String nombre, Integer edad, String localidad) {
         setNombre(nombre);
         setEdad(edad);
@@ -53,6 +64,10 @@ public class Integrante {
         this.localidad = localidad;
     }
 
+    /**
+     * Función que muestra las características de los integrantes
+     * @return Retorna una cadena de texto con las características de los integrantes
+     */
     @Override
     public String toString() {
         return "Integrante{" +
