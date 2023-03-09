@@ -58,7 +58,7 @@ public class Coro extends AgrupacionOficial{
      */
     @Override
     public String cantarPresentacion() {
-        return "Cantando la presentacion de " + getNombre();
+        return "Cantando la presentacion del coro" + getNombre();
     }
 
 

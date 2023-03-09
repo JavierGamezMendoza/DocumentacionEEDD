@@ -46,8 +46,9 @@ public class Comparsa extends AgrupacionOficial implements Callejera{
      */
     @Override
     public String cantarPresentacion() {
-        return null;
+        return "Cantando la presentación de la Comparsa " + getNombre();
     }
+
 
     @Override
     public String hacerTipo() {
