@@ -11,6 +11,11 @@ import model.*;
  */
 public class Main {
 	static Coac coac = new Coac(20,10);
+
+	/**
+	 * Función principal del programa
+	 * @param args Argumentos añadidos al ejecutar el programa
+	 */
 	public static void main(String[] args) {
 		gestionPrograma();
 	}
