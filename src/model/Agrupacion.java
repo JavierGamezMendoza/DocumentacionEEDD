@@ -4,7 +4,10 @@
 package model;
 
 /**
+ * Clase abstracta para las agrupaciones
  *
+ * @author Javier Gámez Mendoza
+ * @Version 1.0
  */
 public abstract class Agrupacion {
     private String nombre;
@@ -19,6 +22,14 @@ public abstract class Agrupacion {
         setAgrupacionesTotal(i++);
     }
 
+    /**
+     * Constructor para las agrupaciones
+     * @param nombre Nombre de la agrupación
+     * @param autor Autor de la agrupación
+     * @param autorMusica Autor de la música tocasda
+     * @param autorLetra Autor de la letra cantada
+     * @param tipo Tipo de agrupación
+     */
     public Agrupacion(String nombre, String autor, String autorMusica, String autorLetra, String tipo) {
         setAgrupacionesTotal(i++);
         setNombre(nombre);
@@ -76,6 +87,10 @@ public abstract class Agrupacion {
         this.agrupacionesTotal = agrupacionesTotal;
     }
 
+    /**
+     * Metodo para mostrar las características de una agrupación en formato texto
+     * @return Retorna las características de la agrupación en una cadena de texto
+     */
     @Override
     public String toString() {
         return "Agrupacion{" +
@@ -88,6 +103,11 @@ public abstract class Agrupacion {
                 '}';
     }
 
+    /**
+     * Comparador de Agrupaciones por nomrbe
+     * @param a Agrupacion a comparar
+     * @return Retorna un entero dependiendo de que agrupación vaya primero
+     */
     public Integer compareTo(Agrupacion a){
         return this.getNombre().compareTo(a.getNombre());
     }

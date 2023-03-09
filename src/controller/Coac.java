@@ -18,7 +18,7 @@ import java.util.Arrays;
 /**
  * Clase controladora para la gesti&oacute;n de asociaciones de carnavales.
  *
- * @author Javier Gamez Mendoza
+ * @author Javier Gámez Mendoza
  * @version 1.0
  */
 public class Coac {
@@ -28,9 +28,9 @@ public class Coac {
     private AgrupacionOficial[] agrupacionesOficiales = new AgrupacionOficial[10];
 
     /**
-     * Constructor de la asociaci&oacute;n de carnavales
-     * @param i N&uacute;mero de agrupaciones
-     * @param i1 N&uacute;mero de integrantes
+     * Constructor de la asociación de carnavales
+     * @param i Número de agrupaciones
+     * @param i1 Número de integrantes
      */
     public Coac(int i, int i1) {
         setAgrupaciones(new Agrupacion[i]);
@@ -38,9 +38,9 @@ public class Coac {
     }
 
     /**
-     * Inserta un integrante a la asociaci&oacute;n de carnavales
+     * Inserta un integrante a la asociación de carnavales
      * @param i Integrante a insertar
-     * @return Retorna una confirmaci&oacute;n de la operacion
+     * @return Retorna una confirmación de la operación
      */
     public boolean insertarIntegrante(Integrante i ){
         for (Integrante integrante : integrantes){
@@ -53,9 +53,9 @@ public class Coac {
     }
 
     /**
-     * Elimina un integrante de la asociaci&oacute;n de carnavales
+     * Elimina un integrante de la asociación de carnavales
      * @param nombre Nombre del integrante a eliminar
-     * @return Retorna una confirmaci&oacute;n de la operaci&oacute;n
+     * @return Retorna una confirmación de la operación
      */
     public boolean eliminarIntegrante(String nombre){
         for (Integrante integrante : integrantes){
@@ -68,9 +68,9 @@ public class Coac {
     }
 
     /**
-     * Añade una agrupaci&oacute;n a la asociaci&oacute;n de carnavales
-     * @param agr Agrupaci&oacute;n a añadir
-     * @return  Retorna una confirmaci&oacute;n de la operaci&oacute;n
+     * Añade una agrupación a la asociación de carnavales
+     * @param agr Agrupación a añadir
+     * @return  Retorna una confirmación de la operación
      */
     public boolean inscribir_agrupacion(Agrupacion agr){
         for (Agrupacion agrupacion : agrupaciones){
@@ -83,9 +83,9 @@ public class Coac {
     }
 
     /**
-     * Elimina una agrupaci&oacute;n de la asociaci&oacute;n de carnavales
-     * @param nombre Nombre de la asociaci&oacute;n
-     * @return Retorna una confirmaci&oacute;n de la operaci&oacute;n
+     * Elimina una agrupación de la asociación de carnavales
+     * @param nombre Nombre de la asociación
+     * @return Retorna una confirmación de la operación
      */
     public boolean eliminar_agrupacion(String nombre){
         for (Agrupacion agrupacion : agrupaciones){
