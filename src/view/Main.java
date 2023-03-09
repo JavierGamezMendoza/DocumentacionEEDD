@@ -1,8 +1,11 @@
 
 package view;
 
-public class Main {
+import controller.Coac;
+import model.*;
 
+public class Main {
+	static Coac coac = new Coac(20,10);
 	public static void main(String[] args) {
 		gestionPrograma();
 	}
@@ -13,11 +16,95 @@ public class Main {
 			mostrarMenuPrincipal();
 			opc = Util.leerInt("Opción [0 - Salir] : ");
 			switch (opc) {
-			case 1 -> opcIntegrantes();
-			case 5 -> opcConcurso();
+				case 1 -> opcIntegrantes();
+				case 2 -> addAgrupacion();
+				case 3 -> opcDeleteAgrupacion();
+				case 4 -> modAgrupacion();
+				case 5 -> opcConcurso();
+				case 6 -> listAll();
+				case 7 -> listChirigotas();
+				case 8 -> listCoros();
+				case 9 -> listCuartetos();
+				case 10 -> listComparsas();
+				case 11 -> listRomanceros();
+				case 12 -> sortAgrupName();
+				case 13 -> sortAgrupAuthor();
+				case 14 -> sortAgrupML();
 			}
 		} while (opc != 0);
 		finDelPrograma();
+	}
+
+	private static void sortAgrupML() {
+	}
+
+	private static void sortAgrupAuthor() {
+	}
+
+	private static void sortAgrupName() {
+	}
+
+	private static void listRomanceros() {
+		Agrupacion[] a = coac.getAgrupaciones();
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] instanceof Romancero) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+
+	private static void listComparsas() {
+		Agrupacion[] a = coac.getAgrupaciones();
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] instanceof Comparsa) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+
+	private static void listCuartetos() {
+		Agrupacion[] a = coac.getAgrupaciones();
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] instanceof Cuarteto) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+
+	private static void listCoros() {
+		Agrupacion[] a = coac.getAgrupaciones();
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] instanceof Coro) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+
+	private static void listChirigotas() {
+		Agrupacion[] a = coac.getAgrupaciones();
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] instanceof Chirigota) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+
+	private static void listAll() {
+		Agrupacion[] a = coac.getAgrupaciones();
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] != null) {
+				System.out.print(a[i]);
+			}
+		}
+	}
+
+	private static void modAgrupacion() {
+	}
+
+	private static void opcDeleteAgrupacion() {
+	}
+
+	private static void addAgrupacion() {
 	}
 
 	private static void opcIntegrantes() {

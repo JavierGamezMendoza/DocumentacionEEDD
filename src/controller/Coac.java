@@ -20,6 +20,11 @@ public class Coac {
     private Agrupacion[] agrupaciones = new Agrupacion[10];
     private AgrupacionOficial[] agrupacionesOficiales = new AgrupacionOficial[10];
 
+    public Coac(int i, int i1) {
+        setAgrupaciones(new Agrupacion[i]);
+        setIntegrantes(new Integrante[i1]);
+    }
+
     public boolean insertarIntegrante(Integrante i ){
         for (Integrante integrante : integrantes){
             if (integrante == null){
